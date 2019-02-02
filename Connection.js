@@ -80,7 +80,7 @@ WebClient.Connection.prototype.socketOnDisconnect = function(event){
 	if(this.isOpen()){
 		this.onDisconnect(event);
 	}
-	else if(onFailConnect){
+	else if(this.onFailConnect){
 		this.onFailConnect(event);
 	}
 	this.closed = true;
